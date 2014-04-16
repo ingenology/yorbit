@@ -9,7 +9,7 @@
 
 <p align="center">New Yorbit Web Server <cfoutput>#now()#</cfoutput></p>
 
-<form action="secure/maplist.cfm" method="post">
+<form action="secure2/maplist.cfm" method="post">
 <table width="380" border="0" align="center">
 <cfif isdefined("message")><tr>
           <td colspan="2"><font color="#FF0000"><cfoutput>#message#</cfoutput></font></td>
