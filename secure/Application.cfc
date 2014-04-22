@@ -13,7 +13,9 @@
 			
 			<cflogin>
 						<cfset loginflag = false>
-	
+						
+						<cfif isdefined("URL.userIN")><cfset FORM.userIn = URL.userIn><cfset FORM.passIn = URL.passIn></cfif>
+						
 						<cfif isdefined("FORM.userIn")>
 							
 							<cftry>						
@@ -34,7 +36,7 @@
 						</cfif>
 						
 						<cfif loginflag is false>
-							<cflocation url="../index.cfm?message=Could not Log In">
+							<cflocation url="../login.cfm?message=Could not Log In">
 							<cfabort>
 						</cfif>
 			</cflogin>
@@ -50,7 +52,7 @@
 				</cfsavecontent>
 			<cfelse>
 				<cflogout>
-				<cflocation url="../index.cfm">
+				<cflocation url="../index.html">
 				<cfabort>
 			</cfif>
 			
@@ -73,7 +75,7 @@
 		    <hr>
 			Error Details (please send these to <a href="mailto:jim@zeboco.com">Jim Farnham</a>):<br />
 		    Message: <cfdump var="#arguments.exception.cause.message#" label="Error"><br />
-			ID: #session.sessionID#<br>
+			ID: #session.user#<br>
 			Detail Trace: <cfdump var="#arguments.exception.cause.TagContext[1].RAW_TRACE#" label="Error"><hr />
 		    <cfdump var="#arguments.exception#"><!---  --->
 		    </cfoutput>
