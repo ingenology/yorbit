@@ -1,4 +1,4 @@
-<header> 
+<header class="yorbit-application"> 
 	<div class="container"> 
 		<div class="logo">
 			<a href="/">

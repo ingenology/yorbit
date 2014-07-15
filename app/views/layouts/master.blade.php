@@ -58,13 +58,13 @@
             </div>
         @endif
         
-		<div class="overlay overlay-door">
+		<div class="overlay overlay-door yorbit-application">
             <div class="close_button">
                 <a href="#" class="close_navigation overlay-close" onclick="return false;">X</a>
             </div>
             @include('partials.navigation')
         </div>
-		<div class="container">
+		<div class="container yorbit-application">
 			@yield('content')
 		</div>
         @if(Request::segment(1) === 'step-2' || Request::segment(1) === 'step-3' || Request::segment(1) === 'map')
@@ -72,6 +72,18 @@
                 <div class="graphic"></div>
             </div>
         @endif
+
+        <div class="disclaimer">
+             <div class="container">
+                <div class="logo">
+                    <a href="/">
+                        <img src="{{ asset('images/logo.png') }}" alt="Yorb.it" title="Yorb.it Logo" />
+                    </a>
+                </div>
+                <h2>Your current screen size is not large enough to support this application. Make your screen larger or view this on a different device.</h2>
+                {{ HTML::link('/', 'Go Back', array('class' => 'btn btn-transparent btn-skinny')) }}
+            </div>
+        </div>
 
         @yield('scripts')
         
