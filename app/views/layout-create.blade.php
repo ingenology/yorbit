@@ -129,7 +129,7 @@
                         </div>
                     </div>
                     <div class="row3">
-                        <div class="button delete" id="delete_pattern">
+                        <div class="button delete" id="delete-pattern">
                             Delete
                         </div>
                     </div>
