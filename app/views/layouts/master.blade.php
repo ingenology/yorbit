@@ -6,21 +6,8 @@
         	@yield('title') | Yorbit
         </title>
         <meta name="description" content="">
-        <meta name="viewport" content="width=device-width">
-        <link rel="shortcut icon" href="{{ asset('images/favicon.ico') }}">
-        <link rel="apple-touch-icon" href="{{ asset('images/apple-touch-icon.png') }}" />
-		<link rel="apple-touch-icon" sizes="57x57" href="{{ asset('images/apple-touch-icon-57x57.png') }}" />
-		<link rel="apple-touch-icon" sizes="72x72" href="{{ asset('images/apple-touch-icon-72x72.png') }}" />
-		<link rel="apple-touch-icon" sizes="76x76" href="{{ asset('images/apple-touch-icon-76x76.png') }}" />
-		<link rel="apple-touch-icon" sizes="114x114" href="{{ asset('images/apple-touch-icon-114x114.png') }}" />
-		<link rel="apple-touch-icon" sizes="120x120" href="{{ asset('images/apple-touch-icon-120x120.png') }}" />
-		<link rel="apple-touch-icon" sizes="144x144" href="{{ asset('images/apple-touch-icon-144x144.png') }}" />
-		<link rel="apple-touch-icon" sizes="152x152" href="{{ asset('images/apple-touch-icon-152x152.png') }}" />
-
-        <link rel="stylesheet" href="{{ asset('styles/vendor.css') }}">
-        <link rel="stylesheet" href="{{ asset('styles/styles.css') }}">
-
-        <script src="{{ asset('scripts/vendor/modernizr.js') }}"></script>
+        
+        @include('partials.head-elements')
 
         @if(Request::segment(1) === 'step-2' || Request::segment(1) === 'step-3' || Request::segment(1) === 'map')
             <link href='http://fonts.googleapis.com/css?family=Questrial|Source+Sans+Pro:300,400,600,700,400italic|Permanent+Marker|Playfair+Display:400,700,400italic|Lobster|Rokkitt:400,700|Yanone+Kaffeesatz:400,700|Indie+Flower|Special+Elite|Changa+One:400,400italic' rel='stylesheet' type='text/css'>
@@ -88,18 +75,7 @@
 
         @yield('scripts')
         
-		<script src="{{ asset('scripts/vendor.js') }}"></script>
-        <script src="{{ asset('scripts/scripts.js') }}"></script>
-
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-        <script>
-            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            e.src='//www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-XXXXX-X');ga('send','pageview');
-        </script>
+		@include('partials.footer-elements')
 	</body>
 </html>
 
