@@ -23,9 +23,9 @@ return array(
 		'mysql' => array(
 			'driver'    => 'mysql',
 			'host'      => 'localhost',
-			'database'  => 'yorbit',
-			'username'  => 'root',
-			'password'  => 'dougefresh',
+			'database'  => 'yorbit-live',
+			'username'  => 'salvaorenick',
+			'password'  => 'down to the crossroads',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',

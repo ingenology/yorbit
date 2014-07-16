@@ -26,6 +26,6 @@ return array(
 	|
 	*/
 
-	'url' => 'http://yorbit:8888',
+	'url' => 'http://skyfall.ingenology.com',
 
 );
