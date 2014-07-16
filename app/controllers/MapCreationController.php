@@ -19,14 +19,25 @@ class MapCreationController extends \BaseController {
 	 */
 	public function searchMap()
 	{
+		// Validates all inputs.
 		$rules = array(
 			'location'       => 'required',
 			'dateIn'      => 'required'
 		);
 		$validator = Validator::make(Input::all(), $rules);
 
+		// Validates if date is valid
+		$currentDate = date('Y-m-d');
+		$currentDate = str_replace('-', '', $currentDate);
+		$currentDate = intval($currentDate);
+		$selectedDate = Input::get('dateIn');
+		$selectedDate = str_replace('-', '', $selectedDate);
+		$selectedDate = intval($selectedDate);
+
 		if ($validator->fails()) {
 			return Redirect::to('step-1')->withErrors($validator)->withInput();
+		} else if ($selectedDate >= $currentDate) {
+			return Redirect::to('step-1')->with('warning', 'Please select a date that is not in the future.');
 		} else {
 			$data = Input::all();
 			return View::make('layout-create', $data);
