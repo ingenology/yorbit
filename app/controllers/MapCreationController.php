@@ -61,8 +61,6 @@ class MapCreationController extends \BaseController {
 		$map->save();
 
 		$lastID = $map->id;
-
-		//Notification::success('Your map has been successfully created.');
 		return Redirect::action('MapCreationController@viewMap', $lastID)->with('success', 'Your map has been successfully created.');
 	}
 
