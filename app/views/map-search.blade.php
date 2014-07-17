@@ -9,9 +9,9 @@
             {{ Form::hidden('latitude', null, array('id' => 'search-latitude', 'autocomplete' => 'off')) }}
             {{ Form::hidden('longitude', null, array('id' => 'search-longitude', 'autocomplete' => 'off')) }}
 			{{ Form::label('location', 'Location', array('class' => 'control-label')) }}
-			{{ Form::text('location', null, array('class' => 'location', 'placeholder' => 'Kansas City', 'id' => 'location', 'autocomplete' => 'off')) }}
+			{{ Form::text('location', null, array('class' => 'location', 'id' => 'location', 'autocomplete' => 'off')) }}
 			{{ Form::label('dateIn', 'Date', array('class' => 'control-label')) }}
-			{{ Form::text('dateIn', null, array('class' => 'date', 'placeholder' => '2014-12-01', 'id' => 'dateIn', 'autocomplete' => 'off')) }}
+			{{ Form::text('dateIn', null, array('class' => 'date', 'id' => 'dateIn', 'autocomplete' => 'off')) }}
 			<div class="button-group map-type">
                 <p>Seach maps by the following</p>
                 <div class="button first" data="3">
