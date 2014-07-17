@@ -148,7 +148,10 @@
 
 @section('scripts')
 <script type="text/javascript">
-    var mapLocation = '{{ Input::get('location') }}';
+    var mapLatitude = {{ Input::get('latitude') }},
+        mapLongitude = {{ Input::get('longitude') }},
+        //mapLocation = '{{ Input::get('location') }}',
+        dateIn = '{{ Input::get('dateIn') }}';
 
     @if (Input::get('mapType') === '1')
         var urlIn = 'http://map1.vis.earthdata.nasa.gov/wmts-webmerc/MODIS_Terra_CorrectedReflectance_TrueColor',
@@ -166,7 +169,5 @@
             zoomMax = 9,
             mapTypeName = 'MODIS_Aqua_SurfaceReflectance_Bands121';
     @endif
-
-    var dateIn = '{{ Input::get('dateIn') }}';
 </script>
 @stop
