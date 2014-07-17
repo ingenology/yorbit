@@ -62,21 +62,20 @@
         </div>
         <script type="text/javascript">
             var addthis_config = {
-                "data_track_addressbar": false
+                data_track_addressbar: false
             };
             var addthis_share = {
-                "title": "Look at what was created on Yorbit.",
-                "description": "Click this link to view this canvas that was created with Yorbit."
+                title: "Look at what was created on Yorbit.",
+                description: "Click this link to view this canvas that was created with Yorbit."
             }
         </script>
-        <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-522f3ece441fe376"></script>
+        <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-534f30e029418f6a"></script>
         <!-- AddThis Button END -->
     </div>
 </div>
 
 <script type="text/javascript">
-    var mapLocation = '{{ $map_location }}',
-        mapZoom = {{ $map_zoom }},
+    var mapZoom = {{ $map_zoom }},
         mapCenter = '{{ $map_center }}',
         mapDate = '{{ $map_date }}';
 
