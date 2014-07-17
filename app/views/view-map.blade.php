@@ -67,7 +67,7 @@
             var addthis_share = {
                 title: "Look at what was created on Yorbit.",
                 description: "Click this link to view this canvas that was created with Yorbit."
-            }
+            };
         </script>
         <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-534f30e029418f6a"></script>
         <!-- AddThis Button END -->
