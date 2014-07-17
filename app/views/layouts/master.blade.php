@@ -5,7 +5,10 @@
         <title>
         	@yield('title') | Yorbit
         </title>
-        <meta name="description" content="">
+        <meta name="description" content="@yield('description')">
+        
+        <meta property="og:title" content="@yield('title') | Yorbit" />
+        <meta property="og:description" content="@yield('description')" />
         
         @include('partials.head-elements')
 

@@ -1,3 +1,11 @@
+<meta property="og:site_name" content="Yorbit" />
+<meta property="og:url" content="http://yorb.it" />
+<meta property="og:type" content="application"/>
+<meta property="og:image" content="{{ asset('images/yorbit-open-graph.jpg') }}" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="324" />
+
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <link rel="shortcut icon" href="{{ asset('images/favicon.ico') }}">
 <link rel="apple-touch-icon" href="{{ asset('images/apple-touch-icon.png') }}" />

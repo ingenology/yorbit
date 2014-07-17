@@ -2,6 +2,9 @@
 
 @section('title')View A Map @endsection
 
+@section('description')
+Art was meant to be admired, so we've made it easy to share your personalized satellite photography. Generate a custom link to email or post to social media and let the world (or someone special) know how you feel. @endsection
+
 @section('bodyClass')share @endsection
 
 @section('content')

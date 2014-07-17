@@ -5,7 +5,10 @@
         <title>
         	Yorbit | The world is your canvas.
         </title>
-        <meta name="description" content="">
+        <meta name="description" content="People create YORBIT earth art to commemorate a special moment, share a thought about a special place, and more. The possibilities are endless when the world is your canvas.">
+
+        <meta property="og:title" content="Yorbit | The world is your canvas." />
+        <meta property="og:description" content="People create YORBIT earth art to commemorate a special moment, share a thought about a special place, and more. The possibilities are endless when the world is your canvas." />
         
         @include('partials.head-elements')
 
