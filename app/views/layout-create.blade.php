@@ -31,7 +31,7 @@
                 <div class="content">
                     <div class="row1">
                         <div class="buttons">
-                            <div class="button" data="regular">
+                            <div class="button active" data="regular">
                                 Regular
                             </div>
                             <div class="button" data="bold">
