@@ -19,7 +19,7 @@ Art was meant to be admired, so we've made it easy to share your personalized sa
     </div>
     <div class="tools">
         <div class="share">
-            <p>Take a look at this recently created piece of work. Feel free to share this map or create your own by clicking below.</p>
+            <p>Your personalized map has been created. Share your artwork through social media or email. Or create a new map.</p>
             <a href="#" class="btn btn-skinny btn-block btn-primary" id="share-now">Share</a>
             {{ HTML::link('step-1', 'Create A Map', array('class' => 'btn btn-skinny btn-block btn-primary')) }}
         </div>
