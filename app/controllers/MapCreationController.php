@@ -36,6 +36,8 @@ class MapCreationController extends \BaseController {
 
 		if ($validator->fails()) {
 			return Redirect::to('step-1')->withErrors($validator)->withInput();
+		} else if ($selectedDate < 20120501) {
+			return Redirect::to('step-1')->with('warning', 'Images for this date are not available.');
 		} else if ($selectedDate >= $currentDate) {
 			return Redirect::to('step-1')->with('warning', 'Please select a date that is not in the future.');
 		} else {
