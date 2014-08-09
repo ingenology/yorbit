@@ -16,8 +16,15 @@
 
     </head>
     <body class="home">
+        <!--[if lt IE 9]>
+            <div class="browser-check not-available">
+                You are currently using a browser that <strong>does not support</strong> technology used by this website.<br />Please <a href="http://browsehappy.com/">upgrade your browser</a> to be able to view this site.
+            </div>
+        <![endif]-->
         <!--[if lt IE 10]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+            <div class="browser-check">
+                You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.
+            </div>
         <![endif]-->
         <div class="overlay overlay-door">
             <div class="close_button">
