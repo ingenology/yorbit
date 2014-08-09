@@ -28,7 +28,7 @@ $env = $app->detectEnvironment(array(
 
 	'local' => array('localhost', 'yorbit:8888', 'Dougs-Mac-mini.local'),
 	'staging' => array('skyfall.ingenology.com', 'so-website'),
-	'ingenology' => array('yorb.it')
+	'production' => array('yorb.it', 'yorbit')
 
 ));
 
