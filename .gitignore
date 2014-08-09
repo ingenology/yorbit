@@ -3,6 +3,7 @@
 /app/config/local
 /app/config/staging
 /app/config/ingenology
+/app/config/production
 composer.phar
 composer.lock
 .env.*.php
