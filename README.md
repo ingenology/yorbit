@@ -1,6 +1,8 @@
 Yorbit SailsJS refactor
 =======
 
+*Due to the need to spin up further infrastructure, Ingenology did not pursue deployment of this branch to production. This branch however does contain a fully working application.*
+
 This branch of the repository holds a [SailsJS](http://sailsjs.org/) rebuild of the award-winning Yorbit application built for the NASA Space Apps Challenge.
 
 ### Features
