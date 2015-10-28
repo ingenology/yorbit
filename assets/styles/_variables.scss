@@ -1,0 +1,120 @@
+/* #Variables
+================================================== */
+
+// COLORS
+$blue: #414f65;
+$darkblue: #13171d;
+$darkgrey: #1a1e25;
+$lightblue: #bccfe9;
+$grey: #3e4958;
+$green: #1daf95;
+
+@mixin sourcesans($weight: 400) {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: $weight;
+}
+
+@mixin questrial {
+	font-family: 'Questrial', sans-serif;
+	font-weight: 400;
+}
+
+@mixin permanent-marker {
+	font-family: 'Permanent Marker', cursive;
+	font-weight: 400;
+}
+
+@mixin playfair-display($weight: 400) {
+	font-family: 'Playfair Display', serif;
+	font-weight: $weight;
+}
+
+@mixin lobster {
+	font-family: 'Lobster', cursive;
+	font-weight: 400;
+}
+
+@mixin rokkitt($weight: 400) {
+	font-family: 'Rokkitt', serif;
+	font-weight: $weight;
+}
+
+@mixin yanone-kaffeesatz($weight: 400) {
+	font-family: 'Yanone Kaffeesatz', sans-serif;
+	font-weight: $weight;
+}
+
+@mixin indie-flower {
+	font-family: 'Indie Flower', cursive;
+	font-weight: 400;
+}
+
+@mixin special-elite {
+	font-family: 'Special Elite', cursive;
+	font-weight: 400;
+}
+
+@mixin changa-one {
+	font-family: 'Changa One', cursive;
+	font-weight: 400;
+}
+
+// MIXINS
+@mixin transition($target: all, $time: 0.4s, $ease: ease) {
+	-webkit-transition: $target $time $ease;
+	-moz-transition: $target $time $ease;
+	-ms-transition: $target $time $ease;
+	-o-transition: $target $time $ease;
+	transition: $target $time $ease;
+}
+
+@mixin border-radius($size) {
+	-webkit-border-radius: $size;
+	-moz-border-radius: $size;
+	-ms-border-radius: $size;
+	-o-border-radius: $size;
+	border-radius: $size;
+}
+
+@mixin rotate($amount) {
+	-ms-transform: rotate($amount);
+	-webkit-transform: rotate($amount);
+	transform: rotate($amount);
+}
+
+@mixin clearfix {
+	&:before, &:after {
+		display: table;
+		line-height: 0;
+		content: "";
+	}
+	&:after {
+		clear: both;
+	}
+}
+
+@mixin flex {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+}
+
+@mixin retina($file, $type, $width: auto, $height: auto) {
+	background-image: url('/images/' + $file + '.' + $type);
+
+	@media all and (-webkit-min-device-pixel-ratio: 1.5), (-moz-min-device-pixel-ratio: 1.5) {
+		& {
+		  background-image: url('/images/' + $file + '@2x.' + $type);
+		  -webkit-background-size: $width $height;
+		  background-size: $width $height;
+		}
+	}
+}

@@ -1,0 +1,164 @@
+@import "../variables";
+
+/* #NAVIGATION OVERLAY
+================================================== */
+.overlay {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: rgba(41, 41, 41, .95);
+	z-index: 5000;
+	overflow: hidden;
+
+	nav {
+		text-align: center;
+		position: relative;
+		top: 33%;
+		height: auto;
+		background: none;
+		left: 50%;
+		
+		-webkit-transform: translateY(-50%) translateX(-50%);
+		-ms-transform: translateY(-50%) translateX(-50%);
+		-o-transform: translateY(-50%) translateX(-50%);
+		-moz-transform: translateY(-50%) translateX(-50%);
+		transform: translateY(-50%) translateX(-50%);
+
+		@include transition(opacity, 0.3s 0.5s);
+		
+		z-index: 7000;
+
+		ul {
+			list-style: none;
+			padding: 0;
+			margin: 0 auto;
+			display: inline-block;
+			position: relative;
+			width: 100%;
+
+			@include sourcesans(300);
+
+			li {
+				text-transform: uppercase;
+				border: none;
+				margin-bottom: 0;
+				line-height: normal;
+				display: block;
+				
+				-webkit-backface-visibility: hidden;
+				-ms-backface-visibility: hidden;
+				-o-backface-visibility: hidden;
+				-moz-backface-visibility: hidden;
+				backface-visibility: hidden;
+
+				a {
+					display: block;
+					padding: 10px;
+					font-size: 48px;
+					text-decoration: none;
+					color: $green;
+
+					@include transition(all, 0.2s);
+
+					&:hover {
+						color: white;
+						text-decoration: none;
+						background: #196c93; /* Old browsers */
+						/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+						background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzE5NmM5MyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMxZGFmOTUiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+						background: -moz-linear-gradient(left,  #196c93 0%, #1daf95 100%); /* FF3.6+ */
+						background: -webkit-gradient(linear, left top, right top, color-stop(0%,#196c93), color-stop(100%,#1daf95)); /* Chrome,Safari4+ */
+						background: -webkit-linear-gradient(left,  #196c93 0%,#1daf95 100%); /* Chrome10+,Safari5.1+ */
+						background: -o-linear-gradient(left,  #196c93 0%,#1daf95 100%); /* Opera 11.10+ */
+						background: -ms-linear-gradient(left,  #196c93 0%,#1daf95 100%); /* IE10+ */
+						background: linear-gradient(to right,  #196c93 0%,#1daf95 100%); /* W3C */
+						filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#196c93', endColorstr='#1daf95',GradientType=1 ); /* IE6-8 */
+
+					}
+				}
+			}
+		}
+	}
+	.close_button {
+		position: relative;
+		display: block;
+		text-align: right;
+		padding: 30px;
+		background: rgb(41, 41, 41);
+
+		.close_navigation {
+			position: relative;
+			padding: 10px 15px;
+			font-size: 30px;
+			@include sourcesans(300);
+			color: white;
+			z-index: 9999;
+			text-decoration: none;
+
+			&:hover {
+				text-decoration: none;
+				background: #151515;
+			}
+			.ex {
+				display: inline-block;
+				font-size: 30px;
+				@include sourcesans(300);
+				margin-bottom: -20px;
+				margin-right: 10px;
+				text-decoration: none;
+			}
+		}
+	}
+}
+/* Effects */
+.overlay-door {
+	visibility: hidden;
+	width: 0;
+	left: 50%;
+	
+	-webkit-transform: translateX(-50%);
+	transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	-o-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	
+	-webkit-transition: width 0.5s 0.3s, visibility 0s 0.8s;
+	transition: width 0.5s 0.3s, visibility 0s 0.8s;
+	-o-transition: width 0.5s 0.3s, visibility 0s 0.8s;
+	-ms-transition: width 0.5s 0.3s, visibility 0s 0.8s;
+	-moz-transition: width 0.5s 0.3s, visibility 0s 0.8s;
+
+	nav, .overlay-close {
+		opacity: 0;
+
+		@include transition(opacity, 0.3s 0.5s);
+	}
+	&.open {
+		visibility: visible;
+		width: 100%;
+
+		@include transition(width, 0.5s);
+
+		nav, .overlay-close {
+			opacity: 1;
+
+			-webkit-transition-delay: 0.5s;
+			transition-delay: 0.5s;
+			-ms-transition-delay: 0.5s;
+			-o-transition-delay: 0.5s;
+			-moz-transition-delay: 0.5s;
+		}
+	}
+	&.close {
+
+		nav, .overlay-close {
+			-webkit-transition-delay: 0s;
+			transition-delay: 0s;
+			-ms-transition-delay: 0s;
+			-o-transition-delay: 0s;
+			-moz-transition-delay: 0s;
+		}
+	}
+}

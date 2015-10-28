@@ -1,0 +1,24 @@
+<div class="application">
+  <div class="map-holder">
+    <div id="map"></div>
+    <div id="map-content" style="display: block;">
+      <%- map_content %>
+    </div>
+    <div id="map-cover"></div>
+  </div>
+  <div class="tools">
+    <div class="share">
+      <p>Your personalized map has been created. Share your artwork through social media or email. Or create a new map.</p>
+      <a href="#" class="btn btn-skinny btn-block btn-primary" id="share-now">Share</a>
+      <a href="/step-1" class="btn btn-skinny btn-block btn-primary">Create A Map</a>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+  var mapZoom = <%= map_zoom %>,
+    mapCenter = '<%= map_center %>',
+    mapDate = '<%= map_date %>';
+
+    <%- partial ('partials/map-type.ejs') %>
+</script>

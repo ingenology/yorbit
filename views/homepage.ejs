@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <!-- Viewport mobile tag for sensible mobile support -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <title>Yorbit | The world is your canvas.</title>
+    <meta name="description" content="Yorbit is a way to personalize and share stunning photographs of Earth captured by NASA satellites.">
+    <meta property="og:title" content="Yorbit | The world is your canvas." />
+    <meta property="og:description" content="People create YORBIT earth art to commemorate a special moment, share a thought about a special place, and more. The possibilities are endless when the world is your canvas." />
+
+    <%- partial ('partials/head-elements.ejs') %>
+
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,400italic' rel='stylesheet' type='text/css'>
+
+    <!--STYLES-->
+    <link rel="stylesheet" href="/styles/spectrum.css">
+    <link rel="stylesheet" href="/styles/importer.css">
+    <!--STYLES END-->
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+      e.src='//www.google-analytics.com/analytics.js';
+      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+      ga('create','UA-4835735-14');ga('send','pageview');
+    </script>
+  </head>
+
+  <body class="home">
+    
+    <%- partial ('partials/navigation.ejs') %>
+
+    <header>
+      <%- partial ('partials/header.ejs') %>
+    </header>
+
+    <div class="banner">
+      <div class="content">
+        <div class="headline">
+          The world is your canvas.
+        </div>
+        <div class="subhead">
+          Searchable sharable satellite art.
+        </div>
+        <div class="button">
+          <a href="/step-1" class="btn btn-transparent">
+            Get Started
+          </a>
+        </div>
+      </div>
+    </div>
+    <section class="white">
+      <div class="container">
+        <div class="graphic">
+          <img src="/images/homepage/ipad1.png" />
+        </div>
+          <div class="content">
+            <div class="step-marker">
+              Step 1
+            </div>
+            <div class="heading">
+              NASA's earth art library awaits.
+            </div>
+            <p>Search by location, date or both, to find beautiful photographs that were captured by NASA satellites orbiting high above the earth. You can choose from Geo, Thermal and Night View maps.</p>
+            <a href="/step-1" class="btn btn-primary btn-skinny">Explore</a>
+          </div>
+        </div>
+    </section>
+    <section class="white">
+      <div class="container">
+        <div class="graphic">
+          <img src="/images/homepage/ipad2.png" />
+        </div>
+        <div class="content">
+          <div class="step-marker">
+            Step 2
+          </div>
+          <div class="heading">
+            Create a personal connection.
+          </div>
+          <p>Want to add a personal message that connects the photo with a special moment in someone's life?  Use our custom text tool to add a personalized message and choose your fonts, colors placement and more. </p>
+          <a href="/step-1" class="btn btn-primary btn-skinny">Explore</a>
+        </div>
+      </div>
+    </section>
+    <section class="white">
+      <div class="container">
+        <div class="graphic">
+          <img src="/images/homepage/ipad3.png" />
+        </div>
+        <div class="content">
+          <div class="step-marker">
+            Step 3
+          </div>
+          <div class="heading">
+            Share your view of the world.
+          </div>
+          <p>Art was meant to be admired, so we've made it easy to share your personalized satellite photography. Generate a custom link to email or post to social media and let the world (or someone special) know how you feel.</p>
+          <a href="/step-1" class="btn btn-primary btn-skinny">Explore</a>
+        </div>
+      </div>
+    </section>
+    <section class="centered">
+      <div class="container">
+        <div class="content">
+          <div class="step-marker">
+            Gallery
+          </div>
+          <div class="heading">
+            What bit will you share?
+          </div>
+          <p>People create YORBIT earth art to commemorate a special moment, share a thought about a special place, and more. What do you want to share?</p>
+        </div>
+      </div>
+    </section>
+    <div class="gallery">
+      <div class="row">
+        <div class="photo">
+          <img src="/images/homepage/gallery1.jpg" />
+        </div>
+        <div class="photo">
+          <img src="/images/homepage/gallery2.jpg" />
+        </div>
+        <div class="photo">
+          <img src="/images/homepage/gallery3.jpg" />
+        </div>
+      </div>
+      <div class="row">
+        <div class="photo">
+          <img src="/images/homepage/gallery4.jpg" />
+        </div>
+        <div class="photo">
+          <img src="/images/homepage/gallery5.jpg" />
+        </div>
+        <div class="photo">
+          <img src="/images/homepage/gallery6.jpg" />
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="container">
+        <div class="left">
+          You're just one click away from making your own masterpiece with NASA's help.
+        </div>
+        <div class="right">
+          <a href="/step-1" class="btn btn-transparent">
+            Get Started
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <!--SCRIPTS-->
+    <script src="/js/dependencies/sails.io.js"></script>
+    <script src="/js/dependencies/dist/jquery.js"></script>
+    <script src="/js/dependencies/ui/jquery-ui.js"></script>
+    <script src="/js/dependencies/jquery.ui.touch-punch-improved.js"></script>
+    <script src="/js/dependencies/modernizr.js"></script>
+    <script src="/js/dependencies/spectrum.js"></script>
+    <script src="/js/dependencies/src/retina.js"></script>
+    <script src="/js/classie.js"></script>
+    <script src="/js/scripts.js"></script>
+    <!--SCRIPTS END-->
+  </body>
+</html>

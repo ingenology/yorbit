@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <!-- Viewport mobile tag for sensible mobile support -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <title>Yorbit</title>
+    <meta property="og:title" content="Yorbit" />
+
+    <%- partial ('partials/head-elements.ejs') %>
+
+    <!--STYLES-->
+    <link rel="stylesheet" href="/styles/spectrum.css">
+    <link rel="stylesheet" href="/styles/importer.css">
+    <!--STYLES END-->
+
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,400italic' rel='stylesheet' type='text/css'>
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+        (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+        function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+        e.src='//www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+        ga('create','UA-4835735-14');ga('send','pageview');
+    </script>
+  </head>
+
+  <body>
+
+    <%- partial ('partials/navigation.ejs') %>
+
+    <header class="yorbit-application">
+      <%- partial ('partials/header.ejs') %>
+    </header>
+
+    <div class="container yorbit-application">
+
+      <!-- PAGE CONTENT GETS RENDERED HERE -->
+      <%- body %>
+      <!-- ******************************* -->
+
+    </div>
+
+    <div class="disclaimer">
+      <div class="container">
+        <div class="logo">
+          <a href="/">
+            <img src="/images/logo.png" alt="Yorb.it" title="Yorb.it Logo" />
+          </a>
+        </div>
+        <h2>Your current screen size is not large enough to support this application. Make your screen larger or view this on a different device.</h2>
+        <a href="/" title="Go Back" class="btn btn-transparent btn-skinny">Go Back</a>
+      </div>
+    </div>
+
+    <!--SCRIPTS-->
+    <script src="/js/dependencies/sails.io.js"></script>
+    <script src="/js/dependencies/dist/jquery.js"></script>
+    <script src="/js/dependencies/ui/jquery-ui.js"></script>
+    <script src="/js/dependencies/jquery.ui.touch-punch-improved.js"></script>
+    <script src="/js/dependencies/modernizr.js"></script>
+    <script src="/js/dependencies/spectrum.js"></script>
+    <script src="/js/dependencies/src/retina.js"></script>
+    <script src="/js/classie.js"></script>
+    <script src="/js/scripts.js"></script>
+    <!--SCRIPTS END-->
+  </body>
+</html>

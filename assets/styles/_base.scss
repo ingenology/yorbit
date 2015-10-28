@@ -1,0 +1,147 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/* #Reset & Basics
+================================================== */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline; }
+    article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+        display: block; }
+    body {
+        line-height: 1; }
+    ol, ul {
+        list-style: none; }
+    blockquote, q {
+        quotes: none; }
+    blockquote:before, blockquote:after,
+    q:before, q:after {
+        content: '';
+        content: none; }
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+.clear {
+    clear: both;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+em {
+    font-style: italic;
+}
+
+strong {
+    font-weight: bold;
+}
+
+img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    vertical-align: middle;
+    border: 0;
+    -ms-interpolation-mode: bicubic;
+}
+
+.hidden-desktop {
+    display: none;
+}
+
+.visible-desktop {
+    display: block;
+}
+
+/* IMPORTS */
+@import "variables";
+@import "modules/buttons";
+@import "modules/notifications";
+
+/* GOOGLE FONTS INCLUDED IN LIST
+
+font-family: 'Questrial', sans-serif;
+font-family: 'Source Sans Pro', sans-serif;
+font-family: 'Permanent Marker', cursive;
+font-family: 'Playfair Display', serif;
+font-family: 'Lobster', cursive;
+font-family: 'Rokkitt', serif;
+font-family: 'Yanone Kaffeesatz', sans-serif;
+font-family: 'Indie Flower', cursive;
+font-family: 'Special Elite', cursive;
+font-family: 'Changa One', cursive;
+
+*/
+
+// RESETS DEFAULT SETTINGS FOR COLOR PICKER
+@import "picker-reset";
+
+//BASIC STYLES
+body {
+    background-color: $darkgrey;
+
+    .container {
+        position: relative;
+        width: 964px;
+        margin: 0 auto;
+
+        @include clearfix;
+    }
+    header {
+        position: relative;
+        width: 100%;
+        height: 85px;
+        background: $darkgrey;
+        border-bottom: 1px solid $grey;
+        z-index: 10;
+
+        .logo {
+            position: relative;
+            float: left;
+            width: 175px;
+            margin-top: 20px;
+        }
+        .navigation-button {
+            position: relative;
+            float: right;
+            width: 25px;
+            margin-top: 35px;
+            cursor: pointer;
+
+            @include transition(0.3s);
+
+            &:hover {
+                opacity: 0.7;
+            }
+        }
+
+        @include clearfix;
+    }
+}
+
+/* NAVIGATION */
+@import "modules/navigation";
+
+/* HOME PAGE */
+@import "home-page";
+
+/* APP */
+@import "app";
+
+/* ERROR PAGE */
+@import "error";

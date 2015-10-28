@@ -1,0 +1,32 @@
+.error-display {
+  position: absolute;
+  height: calc(100vh - 200px);
+  width: 100%;
+  left: 0;
+  top: 0;
+
+  @include flex;
+
+  .error-content {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    @include sourcesans(300);
+
+    .error-number {
+      position: relative;
+
+      font-weight: 600;
+      font-size: 300px;
+      line-height: normal;
+      color: $green;
+    }
+    .error-text {
+      position: relative;
+      margin-top: 20px;
+
+      font-size: 40px;
+      color: $lightblue;
+    }
+  }
+}

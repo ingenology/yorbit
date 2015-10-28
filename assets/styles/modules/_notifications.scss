@@ -1,0 +1,39 @@
+@import "../variables";
+
+.notification {
+	position: absolute;
+	width: 100%;
+	top: 0;
+	left: 0;
+	padding: 20px 0;
+	border-bottom: 1px solid $blue;
+	text-align: center;
+	z-index: 1000;
+
+	&.warning {
+		background-color: #e46363;
+		background-color: rgba(228,99,99,.8);
+	}
+	&.success {
+		background-color: #3eda83;
+		background-color: rgba(62,218,131,.8);
+	}
+	.title {
+		position: relative;
+		display: inline-block;
+
+		@include sourcesans(400);
+		text-transform: uppercase;
+		font-size: 28px;
+		color: white;
+	}
+	.message {
+		position: relative;
+		display: inline-block;
+
+		@include sourcesans(300);
+		font-size: 18px;
+		color: $lightblue;
+		margin-left: 15px;
+	}
+}

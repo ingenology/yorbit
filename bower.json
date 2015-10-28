@@ -1,0 +1,13 @@
+{
+  "name": "yorbit",
+  "private": false,
+  "dependencies": {
+    "modernizr": "~2.6.2",
+    "jquery": "~1.11.1",
+    "jquery-ui": "~1.10.4",
+    "retina.js": "~1.3.0",
+    "spectrum": "~1.3.4",
+    "jquery-ui-touch-punch-improved": "~0.3.1"
+  },
+  "devDependencies": {}
+}

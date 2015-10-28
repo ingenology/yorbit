@@ -1,0 +1,44 @@
+<div class="modal" id="modal1">
+  <p>Enter the name of a city, or a zip code followed the date and type of map that you would like to use.</p>
+  <form method="POST" action="/step-2" role="form" id="search-form">
+    <input type="hidden" name="latitude" id="search-latitude" autocomplete="off" value="" />
+    <input type="hidden" name="longitude" id="search-longitude" autocomplete="off" value="" />
+    <label class="control-label" for="location">Location</label>
+    <input type="text" name="location" class="location" id="location" autocomplete="off" />
+    <label class="control-label" for="dateIn">Date</label>
+    <input type="text" name="dateIn" class="date" id="dateIn" autocomplete="off" />
+    <div class="button-group map-type">
+      <p>Seach maps by the following</p>
+      <div class="button first" data="3">
+        Thermal
+      </div>
+      <div class="button" data="2">
+        Night
+      </div>
+      <div class="button last active" data="1">
+        Geo
+      </div>
+    </div>
+    <select name="mapType" id="mapType" class="hidden" autocomplete="off">
+      <option value="1">CorrectedReflectance_TrueColor</option>
+      <option value="2">City Lights</option>
+      <option value="3">MODIS_Aqua_SurfaceReflectance_Bands121</option>
+    </select>
+    <div class="btn btn-primary btn-large pull-right" id="map-search">Proceed</div>
+    <div class="clear"></div>
+  </form>
+</div>
+
+<div id="ajax-loader" style="display: none;">
+    <div class="graphic"></div>
+</div>
+<div id="search-overlay">
+    <div class="modal-container">
+        <h2>Location search results:</h2>
+        <p>We were able to find more than one result for the location that you searched. Please select below the location that you were want. If it does not appear, please search again.</p>
+        <div class="results"></div>
+        <div class="btn btn-small search-again">
+            Search again
+        </div>
+    </div>
+</div>

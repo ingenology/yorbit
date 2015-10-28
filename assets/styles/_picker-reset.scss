@@ -1,0 +1,63 @@
+@import "variables";
+
+.sp-replacer {
+	background: none;
+}
+
+.sp-container {
+	border-radius: 4px;
+	background-color: $darkgrey;
+	border: 0;
+
+	.sp-picker-container {
+		padding: 6px;
+		border: 0;
+		padding-bottom: 300px;
+		margin-bottom: -294px;
+
+		.sp-cancel {
+			color: $green !important;
+		}
+		button {
+			background-image: none;
+			background-color: #1d5baf;
+			color: $lightblue;
+			border: 0;
+			text-shadow: none;
+			padding: 7px;
+
+			&:hover {
+				background-color: darken(#1d5baf, 10%);
+			}
+		}
+		.sp-dragger {
+			height: 10px;
+			width: 10px;
+			margin: 5px 0 0 5px;
+			@include border-radius(5px);
+			border: 0;
+			background: rgba(255,255,255,.8)
+		}
+		.sp-color, .sp-hue, .sp-clear, .sp-alpha-inner {
+			border: 0;
+		}
+		.sp-slider {
+			height: 6px;
+			border: 0;
+			background: rgba(255,255,255,.8);
+			opacity: 1;
+			@include border-radius(3px);
+		}
+		.sp-alpha-handle {
+			width: 8px;
+			border: 0;
+			background: rgba(255,255,255,.8);
+			opacity: 1;
+			@include border-radius(3px);
+		}
+	}
+}
+
+.sp-preview-inner {
+	@include border-radius(8px);
+}

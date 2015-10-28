@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <!-- Viewport mobile tag for sensible mobile support -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <title><%= pageMeta.title %> | Yorbit</title>
+    <meta name="description" content="<%= pageMeta.description %>">
+    <meta property="og:title" content="<%= pageMeta.title %>" />
+    <meta property="og:description" content="<%= pageMeta.description %>" />
+
+    <%- partial ('partials/head-elements.ejs') %>
+
+    <!--
+        Stylesheets and Preprocessors
+        ==============================
+
+        You can always bring in CSS files manually with `<link>` tags, or asynchronously
+        using a solution like AMD (RequireJS).  Or, if you like, you can take advantage
+        of Sails' conventional asset pipeline (boilerplate Gruntfile).
+
+        By default, stylesheets from your `assets/styles` folder are included
+        here automatically (between STYLES and STYLES END). Both CSS (.css) and LESS (.less)
+        are supported. In production, your styles will be minified and concatenated into
+        a single file.
+
+        To customize any part of the built-in behavior, just edit `tasks/pipeline.js`.
+        For example, here are a few things you could do:
+
+            + Change the order of your CSS files
+            + Import stylesheets from other directories
+            + Use a different or additional preprocessor, like SASS, SCSS or Stylus
+    -->
+
+    <!--STYLES-->
+    <link rel="stylesheet" href="/styles/spectrum.css">
+    <link rel="stylesheet" href="/styles/importer.css">
+    <!--STYLES END-->
+
+    <%if (req.path === '/step-2' || req.path === '/step-3' || req.path.indexOf('/map') > -1) { %>
+      <link href='http://fonts.googleapis.com/css?family=Questrial|Source+Sans+Pro:300,400,600,700,400italic|Permanent+Marker|Playfair+Display:400,700,400italic|Lobster|Rokkitt:400,700|Yanone+Kaffeesatz:400,700|Indie+Flower|Special+Elite|Changa+One:400,400italic' rel='stylesheet' type='text/css'>
+      <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCI_cLTI5OPo5B7Nrcm5AKRKcGsKkTLOCI"></script>
+    <% } else { %>
+      <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,400italic' rel='stylesheet' type='text/css'>
+    <% } %>
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+        (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+        function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+        e.src='//www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+        ga('create','UA-4835735-14');ga('send','pageview');
+    </script>
+  </head>
+
+  <body class="<%= bodyClass %>">
+
+    <%- partial ('partials/navigation.ejs') %>
+
+    <header class="yorbit-application">
+      <%- partial ('partials/header.ejs') %>
+    </header>
+
+    <% if (flash.has('warning')) { %>
+      <!-- Error Messages -->
+      <div class="notification warning">
+        <div class="container">
+            <div class="title">Error</div>
+            <% flash.get('warning').forEach(function (message) { %>
+              <div class="message">
+                <%= message %>
+              </div>
+            <% }) %>
+        </div>
+      </div>
+    <% } %>
+
+    <% if (flash.has('success')) { %>
+      <!-- Error Messages -->
+      <div class="notification success">
+        <div class="container">
+            <div class="title">Success</div>
+            <% flash.get('success').forEach(function (message) { %>
+              <div class="message">
+                <%= message %>
+              </div>
+            <% }) %>
+        </div>
+      </div>
+    <% } %>
+
+    <div class="container yorbit-application">
+
+      <!-- PAGE CONTENT GETS RENDERED HERE -->
+      <%- body %>
+      <!-- ******************************* -->
+
+    </div>
+
+    <%if (req.path === '/step-2' || req.path === '/step-3') { %>
+      <div id="ajax-loader">
+        <div class="graphic"></div>
+      </div>
+    <% } %>
+
+    <%if (req.path.indexOf('/map') > -1) { %>
+      <%- partial ('partials/share-overlay.ejs') %>
+    <% } %>
+
+    <div class="disclaimer">
+      <div class="container">
+        <div class="logo">
+          <a href="/">
+            <img src="/images/logo.png" alt="Yorb.it" title="Yorb.it Logo" />
+          </a>
+        </div>
+        <h2>Your current screen size is not large enough to support this application. Make your screen larger or view this on a different device.</h2>
+        <a href="/" title="Go Back" class="btn btn-transparent btn-skinny">Go Back</a>
+      </div>
+    </div>
+
+    <!--
+
+      Client-side Javascript
+      ========================
+
+      You can always bring in JS files manually with `script` tags, or asynchronously
+      on the client using a solution like AMD (RequireJS).  Or, if you like, you can
+      take advantage of Sails' conventional asset pipeline (boilerplate Gruntfile).
+
+      By default, files in your `assets/js` folder are included here
+      automatically (between SCRIPTS and SCRIPTS END).  Both JavaScript (.js) and
+      CoffeeScript (.coffee) are supported. In production, your scripts will be minified
+      and concatenated into a single file.
+
+      To customize any part of the built-in behavior, just edit `tasks/pipeline.js`.
+      For example, here are a few things you could do:
+
+          + Change the order of your scripts
+          + Import scripts from other directories
+          + Use a different preprocessor, like TypeScript
+
+    -->
+
+    <!--SCRIPTS-->
+    <script src="/js/dependencies/sails.io.js"></script>
+    <script src="/js/dependencies/dist/jquery.js"></script>
+    <script src="/js/dependencies/ui/jquery-ui.js"></script>
+    <script src="/js/dependencies/jquery.ui.touch-punch-improved.js"></script>
+    <script src="/js/dependencies/modernizr.js"></script>
+    <script src="/js/dependencies/spectrum.js"></script>
+    <script src="/js/dependencies/src/retina.js"></script>
+    <script src="/js/classie.js"></script>
+    <script src="/js/scripts.js"></script>
+    <!--SCRIPTS END-->
+  </body>
+</html>

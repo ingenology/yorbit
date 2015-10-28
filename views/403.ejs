@@ -1,0 +1,14 @@
+<div class="error-display">
+  <div class="error-content">
+    <div class="error-number">
+      403
+    </div>
+    <div class="error-text">
+      <% if (typeof error!== 'undefined') { %>
+        <%= error %>
+      <% } else { %>
+        You don't have permission to view this page. Stop it!
+      <% } %>
+    </div>
+  </div>
+</div>

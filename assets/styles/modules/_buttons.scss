@@ -1,0 +1,89 @@
+@import "../variables";
+
+.btn {
+	padding: 24px 90px 24px 30px;
+	border: 0;
+	@include border-radius(6px);
+	cursor: pointer;
+	background-color: $grey;
+	color: $lightblue;
+	background-repeat: no-repeat;
+	background-position: right center;
+	@include retina(button_arrow, png, 65px, 40px);
+
+	@include sourcesans(600);
+	text-transform: uppercase;
+	font-size: 22px;
+
+	&:hover {
+		background-color: darken($grey, 10%);
+	}
+	&:focus {
+		background-color: darken($grey, 20%);
+		outline: 0;
+	}
+	&.btn-primary {
+		background-color: #1d5baf;
+		color: $lightblue;
+		border: 0;
+
+		&:hover {
+			background-color: darken(#1d5baf, 10%);
+		}
+		&:focus {
+			background-color: darken(#1d5baf, 20%);
+			color: darken($lightblue, 10%);
+		}
+	}
+	&.btn-transparent {
+		background-color: #13171d;
+		background-color: rgba(19,23,29,.27);
+		@include retina(button_arrow_blue, png, 48px, 32px);
+		border: 2px solid $lightblue;
+		color: $lightblue;
+
+		&:hover {
+			background-color: darken(#13171d, 10%);
+			background-color: rgba(19,23,29,.6);
+			color: darken($lightblue, 20%);
+			border-color: darken($lightblue, 20%);
+		}
+		&:focus {
+			background-color: darken(#13171d, 20%);
+			background-color: rgba(19,23,29,.7);
+			color: darken($lightblue, 30%);
+		}
+	}
+	&.btn-large {
+		padding-right: 200px;
+	}
+	&.btn-small {
+		padding: 12px 18px;
+		font-size: 16px;
+		background-image: none;
+	}
+	&.btn-skinny {
+		padding-top: 18px;
+		padding-bottom: 18px;
+	}
+	&.pull-right {
+		float: right;
+
+		&:after {
+			clear: both;
+		}
+	}
+	&.btn-block {
+		display: block;
+	}
+	&.disabled {
+		background-color: darken($grey, 25%);
+	}
+}
+a.btn {
+	display: block;
+	text-decoration: none;
+}
+div.btn {
+	display: inline-block;
+}
