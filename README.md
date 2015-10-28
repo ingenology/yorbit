@@ -41,7 +41,7 @@ npm install -g sails
 npm install && bower install
 ```
 
-5. Start the SailsJS server with:
+**5.** Start the SailsJS server with:
 
 ```
 sails lift
